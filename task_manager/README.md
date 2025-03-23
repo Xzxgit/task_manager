@@ -13,6 +13,7 @@
 3. ```bash
    cd 项目根目录
    pip install -r requirements.txt
+   # 配置完数据库在执行这一步
    uvicorn app.main:app --reload
 4. 数据库配置
    ```sql
@@ -41,6 +42,9 @@
    CREATE USER 'task_user'@'localhost' IDENTIFIED BY 'password';
    GRANT ALL PRIVILEGES ON task_db.* TO 'task_user'@'localhost';
    FLUSH PRIVILEGES;
+   
+   -- 在database.py文件下换成自己的数据库账号密码
+   
 5. 接口文档
    ```bash
    项目在本地跑起来可以通过浏览器访问 
